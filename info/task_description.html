@@ -1,39 +1,59 @@
 <p>
-    <i>( Describe task in general )</i>
+    Do you know about <a href="http://en.wikipedia.org/wiki/Radix">radix</a> and
+    <a href="http://en.wikipedia.org/wiki/Numeral_system">Numeral systems</a>?
+    Let's practice with it.
 </p>
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    You are given a positive number as a string and radix for it. Your function should convert it into decimal form.
+    The radix is less than 37 and greater 2. There is using digits and A-F for the numbers representation.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    Be careful for the cases when the number can not be converted. For example: "1A" can not be converted with radix 9.
+    For these cases your function should return -1.
+</p>
+
+
+<p>
+    <strong>Hints: </strong> You can easily solve this task with
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#int">int() conversion</a> and
+    <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">handling exceptions</a>.
+    (Look at <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#exceptions.ValueError">ValueError</a>) and
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#int">int() conversion</a> and
+    <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">handling exceptions</a>.
+    (Look at <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#exceptions.ValueError">ValueError</a>) and
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>Input: </strong> Two arguments. A string and an integer.
+</p>
+
+<p>
+    <strong>Output: </strong> The integer.
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+checkio("AF", 16) == 176
+checkio("101", 2) == 5
+checkio("101", 5) == 126
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    Here you will learn how to work with the various numeral systems and handle exceptions.
 </p>
