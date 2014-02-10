@@ -8,29 +8,88 @@ Each test is dict with
 """
 
 
+def checkio(str_number, radix):
+    return -1
+
+#These "asserts" using only for self-checking and not necessary for auto-testing
+if __name__ == '__main__':
+    assert checkio("AF", 16) == 176, "Hex"
+    assert checkio("101", 2) == 5, "Bin"
+    assert checkio("101", 5) == 126, "5 base"
+    assert checkio("Z", 36) == 35, "Z base"
+    assert checkio("AB", 10) == -1, "B > A > 10"
+
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": ["AF", 16],
+            "answer": 176,
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
-        }
+            "input": ["101", 2],
+            "answer": 5,
+        },
+        {
+            "input": ["101", 5],
+            "answer": 126,
+        },
+        {
+            "input": ["Z", 36],
+            "answer": 35,
+        },
+        {
+            "input": ["AB", 10],
+            "answer": -1,
+        },
+
     ],
     "Extra": [
-        {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+        {"input": ['F0', 16],
+         "answer": 240
         },
-        {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
-        }
+
+        {"input": ['1111111111', 2],
+         "answer": 1023
+        },
+
+        {"input": ['255', 7],
+         "answer": 138
+        },
+
+        {"input": ['IDDQD', 30],
+         "answer": 14943493
+        },
+
+        {"input": ['1000', 10],
+         "answer": 1000
+        },
+
+        {"input": ['ASD', 15],
+         "answer": -1
+        },
+
+        {"input": ['222', 3],
+         "answer": 26
+        },
+
+        {"input": ['XYZ', 36],
+         "answer": 44027
+        },
+
+        {"input": ['909', 9],
+         "answer": -1
+        },
+
+        {"input": ['1234567890', 11],
+         "answer": 2853116695
+        },
+
+        {"input": ['5A6E', 10],
+         "answer": -1
+        },
+
+        {"input": ['1000000', 31],
+         "answer": 887503681
+        },
     ]
 }
