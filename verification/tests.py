@@ -7,23 +7,11 @@ Each test is dict with
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
 
-
-def checkio(str_number, radix):
-    return -1
-
-#These "asserts" using only for self-checking and not necessary for auto-testing
-if __name__ == '__main__':
-    assert checkio("AF", 16) == 176, "Hex"
-    assert checkio("101", 2) == 5, "Bin"
-    assert checkio("101", 5) == 126, "5 base"
-    assert checkio("Z", 36) == 35, "Z base"
-    assert checkio("AB", 10) == -1, "B > A > 10"
-
 TESTS = {
     "Basics": [
         {
             "input": ["AF", 16],
-            "answer": 176,
+            "answer": 175,
         },
         {
             "input": ["101", 2],
@@ -31,7 +19,7 @@ TESTS = {
         },
         {
             "input": ["101", 5],
-            "answer": 126,
+            "answer": 26,
         },
         {
             "input": ["Z", 36],
