@@ -34,7 +34,7 @@
 .animation-content{
     background-color: #dfe8f7;
     color: #696969;
-    font-family: verdana;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 15px;
     width: 100%;
 }
@@ -60,7 +60,7 @@
 
 .tryit-content {
     background-color: #dfe8f7;
-    font-family: verdana;
+    font-family: Verdana, Arial, sans-serif;
 }
 
 .tryit-content .tool td{
@@ -74,7 +74,7 @@
     height: 20%;
 }
 
-.tryit-content .checkio-result{
+.tryit-content .tool td.checkio-result{
     font-size: 16px;
     text-align: center;
     color: #294270;
@@ -84,7 +84,8 @@
 .tryit-content .btn {
     padding: 4px 6px;
     font-size: 14px;
-    font-family: Verdana;
+    font-family: Verdana, Arial, sans-serif;
+    width: 80px;
     font-weight: 500;
     line-height: 1.428571429;
     text-align: center;
@@ -126,12 +127,22 @@ fieldset[disabled] .btn {
     box-shadow: none;
 }
 
+.tryit-content .tool td {
+    text-align: center;
+    font-size: 13px;
+    color: #294270;
+    font-family: Verdana, Arial, sans-serif;
+}
+
 .tryit-content input[type="text"],
 .tryit-content input[type="number"]
 {
-    display: inline-block;
+    display: block;
     padding: 4px 6px;
     font-size: 14px;
+    width: 170px;
+    text-align: center;
+    margin: 2px auto;
     line-height: 1.428571429;
     font-family: inherit;
     color: #294270;
