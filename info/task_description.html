@@ -2,18 +2,20 @@
         style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
 
 <p>
-    Do you know about <a href="http://en.wikipedia.org/wiki/Radix">radix</a> and
-    <a href="http://en.wikipedia.org/wiki/Numeral_system">Numeral systems</a>?
+    Do you remember <a href="http://en.wikipedia.org/wiki/Radix">the radix</a> and
+    <a href="http://en.wikipedia.org/wiki/Numeral_system">Numeral systems</a> from math class?
     Let's practice with it.
 </p>
 
 <p>
-    You are given a positive number as a string and radix for it. Your function should convert it into decimal form.
-    The radix is less than 37 and greater 2. There is using digits and A-F for the numbers representation.
+    You are given a positive number as a string along with the radix for it. Your function should convert it into decimal form.
+    The radix is less than 37 and greater 2.
+    The task uses digits and the letters  A-F for the strings.
 </p>
 
 <p>
-    Be careful for the cases when the number can not be converted. For example: "1A" can not be converted with radix 9.
+    Watch out for cases when the number cannot be converted.
+    For example: "1A" cannot be converted with radix 9.
     For these cases your function should return -1.
 </p>
 
@@ -21,11 +23,11 @@
 <p>
     <strong>Hints: </strong> You can easily solve this task with
     {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/library/functions.html#int">int() conversion</a> and
+    <a href="http://docs.python.org/2/library/functions.html#int">int() conversion </a> and
     <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">handling exceptions</a>
     (Look at <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
     {% else %}
-    <a href="http://docs.python.org/3/library/functions.html#int">int() conversion</a> and
+    <a href="http://docs.python.org/3/library/functions.html#int">int() conversion </a> and
     <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">handling exceptions</a>
     (Look at <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
 
