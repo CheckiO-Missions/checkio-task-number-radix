@@ -1,0 +1,79 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    Помните про <a href="http://en.wikipedia.org/wiki/Radix">основание системы счисления</a> и
+    <a href="http://en.wikipedia.org/wiki/Numeral_system">сами системы счисления</a> из уроков математики?
+    Давайте попрактикуемся.
+</p>
+
+<p>
+    Дано положительное число как строка и основание системы счисления для него.
+    Ваша функция должна конвертировать это число в десятичную систему счисления.
+
+    Основание системы счисления  меньше 37 и больше 1.
+    В задаче используются цифры и буквы A-Z внутри строчного представления числа.
+</p>
+
+<p>
+    Будьте осторожны со случаями, когда число нельзя сконвертировать.
+    Для примера: "1A" не может сконвертировано при основании системы счисления 9.
+    В этих случаях ваша функция должна возвращать -1.
+</p>
+
+
+<p>
+    <strong>Замечания: </strong> Вы легко решите эту задачу при помощи
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#int">int() конвертации</a> и
+    <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">обработки исключений</a>
+    (Взгляните на <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#int">int() конвертации</a> и
+    <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">обработки исключений</a>
+    (Взгляните на <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>Вх. данные: </strong> Два аргумента. Число как строка (str) и основание системы сичления как целочисленное (int).
+</p>
+
+<p>
+    <strong>Вых. данные: </strong> Сконвертированое число как целочисленное (int).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Примеры:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Как это используется: </strong>
+    Здесь вы попрактикуетесь как работать с различными системами счисления и обрабатывать исключения.
+</p>
+        
+<p>
+    <strong>Предусловия: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36 
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        У нас есть команда экспертов (advisers) на Checkio, так что если вы застряли с решением какой то задачи, то попробуйте
+        использовать “ask advisers” кнопку для того чтобы спросить о помощи.
+    </p>
+</div>

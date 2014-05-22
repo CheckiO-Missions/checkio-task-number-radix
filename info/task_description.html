@@ -10,7 +10,7 @@
 <p>
     You are given a positive number as a string along with the radix for it. Your function should convert it into
     decimal form.
-    The radix is less than 37 and greater 2.
+    The radix is less than 37 and greater 1.
     The task uses digits and the letters A-Z for the strings.
 </p>
 
@@ -22,13 +22,13 @@
 
 
 <p>
-    <strong>Hints: </strong> You can easily solve this task with
+    <strong>Tips: </strong> You can easily solve this task with
     {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/library/functions.html#int">int() conversion </a> and
+    <a href="http://docs.python.org/2/library/functions.html#int">int() conversion</a> and
     <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">handling exceptions</a>
     (Look at <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
     {% else %}
-    <a href="http://docs.python.org/3/library/functions.html#int">int() conversion </a> and
+    <a href="http://docs.python.org/3/library/functions.html#int">int() conversion</a> and
     <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">handling exceptions</a>
     (Look at <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
 
@@ -37,11 +37,11 @@
 
 
 <p>
-    <strong>Input: </strong> Two arguments. A string and an integer.
+    <strong>Input: </strong> Two arguments. A number as string and a radix as an integer.
 </p>
 
 <p>
-    <strong>Output: </strong> The number. An integer.
+    <strong>Output: </strong> The converted number as an integer.
 </p>
 
 
@@ -61,6 +61,13 @@ checkio("AB", 10) == -1
 <p class="for_info_only">
     <strong>How it is used: </strong>
     Here you will learn how to work with the various numeral systems and handle exceptions.
+</p>
+
+<p>
+    <strong>Precondition: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36
 </p>
 
 <div class="facts for_info_only">
