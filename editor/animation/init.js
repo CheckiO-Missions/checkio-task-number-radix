@@ -39,7 +39,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.in;
+            var checkioInput = data.in || [3, 2];
             var inputStr = JSON.stringify(checkioInput[0]) + ", " + JSON.stringify(checkioInput[1]);
 
             if (data.error) {
