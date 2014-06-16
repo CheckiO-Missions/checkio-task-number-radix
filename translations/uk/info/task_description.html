@@ -1,0 +1,79 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    Пам'ятаєте про <a href="http://en.wikipedia.org/wiki/Radix">основу системи числення </a> і
+    <a href="http://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F">
+    самі системи числення</a> з уроків математики? Давайте попрактикуємося.
+</p>
+
+<p>
+    Задане позитивне число як рядок і основа системи числення для нього. 
+    Ваша функція повинна перетворити це число в десяткову систему числення. 
+    Основа системи числення менше 37 і більше 1. У задачі використовуються цифри 
+    і букви A–Z всередині рядкового подання числа
+</p>
+
+<p>
+    Будьте обережні з випадками, коли число не можна перетворити. Наприклад: "1A" не можна 
+    перетворити при основі системи числення 9. У цих випадках ваша функція повинна повертати -1.
+</p>
+
+
+<p>
+    <strong>Зауваження: </strong> Ви легко розв’яжете це завдання за допомогою 
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#int">int() конвертації</a> і
+    <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">обробки винятків</a>
+    (Взгляните на <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#int">int() конвертації</a> і
+    <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">обробки винятків</a>
+    (Взгляните на <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>Вхідні дані: </strong> Два аргументи. Число як рядок (str) і 
+    основа системи числення як ціле число (int)
+</p>
+
+<p>
+    <strong>Вихідні дані: </strong> Перетворене число як ціле число (int).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Приклади:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Як це використовується: </strong>
+    Тут ви можете попрактикуватись як працювати з різними системами числення і обробляти винятки.
+</p>
+        
+<p>
+    <strong>Передумови: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36 
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        У нас є команда експертів (advisers) на Checkio, і тому якщо ви застрягли з 
+        розв’язанням якогось завдання, то попробуйте використати кнопку 
+        "ask advisers" для того, щоб попросити допомоги.
+    </p>
+</div>
