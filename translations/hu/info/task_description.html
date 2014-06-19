@@ -1,0 +1,85 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    Emlékeznek még a matematikaórákon tanult 
+    <a href="http://hu.wikipedia.org/wiki/Radix">számrendszerek alapjára </a> és magukra a 
+    <a href="http://hu.wikipedia.org/wiki/Sz%C3%A1mrendszer">számrendszerekre</a>? 
+    Gyerünk, gyakoroljunk egy keveset!
+</p>
+
+<p>
+    Adott egy pozitív szám szöveg formájában és hozzá egy számrendszernek az alapja. 
+    Az Ön függvényének át kell alakítani ezt a számot a tízes számrendszerbe. 
+    <br>
+    A számrendszer alapja kisebb, mint 37 és nagyobb, mint 1. 
+    A feladatban számjegyek  és A-Z-ig való tartományban található betűk használhatók 
+    fel a szám szöveges ábrázolására.
+</p>
+
+<p>
+    Vegye figyelembe azokat az eseteket, amikor nem lehet egy számot átalakítani. 
+    Például: az „1A” számot nem lehet átalakítani 9-es alapú számrendszer esetében. 
+    Ilyenkor a függvénynek eredménye -1 kell, hogy legyen.
+</p>
+
+
+<p>
+    <strong>Megjegyzés: </strong> ezt a feladatot könnyen meg lehet oldani 
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#int">int() az int() függvénnyel való átalakítással  </a> és
+    <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">a kivételkezeléssel </a>
+    (Взгляните на <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#int">int() az int() függvénnyel való átalakítással  </a> és
+    <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">a kivételkezeléssel </a>
+    (vessen egy pillantást a <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">
+    ValueError</a> kivételre)!
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>Bemeneti adatok: </strong> Két argumentum. Egy szám szöveges 
+    típusú (str) adatként és a számrendszer alapja egész számként(int).
+</p> 
+
+<p>
+    <strong>Kimeneti adatok: </strong> Az átalakított szám egész számként (int).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Példák:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Alkalmazása: </strong>
+    Ennek a feladatnak a segítségével gyakorolni lehet a különböző számrendszerek 
+    közötti átalakítást és a kivételkezelést.
+</p>
+        
+<p>
+    <strong>Előfeltételek: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36 
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        Nálunk a CheckiO-n van egy szakértőgárda (advisers). Tehát, ha Ön elakad 
+        valamelyik feladatat megoldásánál, akkor próbálja meg igénybe venni az 
+        „ask advisers” gombot a segítség kéréséhez! 
+    </p>
+</div>
