@@ -1,0 +1,78 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    ¿Aun recuerdas <a href="http://en.wikipedia.org/wiki/Radix">las bases</a> y los 
+    <a href="http://en.wikipedia.org/wiki/Numeral_system">sistemas numéricos</a> de las clases de matemáticas?
+   ¡Vamos a recordarlos!
+</p>
+
+<p>
+    En esta misión recibirás una cadena de caracteres representando un número y su base.
+    Tu tarea será convertir este número a formato decimal.
+    La base del número estará comprendida entre 1 y 37.
+    La cadena de caracteres contendrá dígitos y letras A-Z.
+</p>
+
+<p>
+   ¡Ten mucho ojo con los casos donde el número no pueda ser convertido!
+    Por ejemplo: "1A" no puede convertirse a base 9.
+    En estos casos, tu función deberá devolver el valor -1.
+</p>
+
+
+<p>
+    <strong>Consejos: </strong> Este problema será muy sencillo de resolver si usas
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#int">int() para convertir a entero</a> y
+    <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">manejas las excepciones</a>
+    (Mira <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#int">int() para convertir a entero</a> y
+    <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">manejas las excepciones</a>
+    (Mira <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>Entrada: </strong> Dos argumentos: un número (cadena de caracteres) y una base (entero).
+</p>
+
+<p>
+    <strong>Salida: </strong> El número convertido a formato decimal (entero).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Ejemplo:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Utilidad: </strong>
+    Aprender a hacer cambios de base entre diferentes sistemas numéricos y manejar excepciones.
+</p>
+
+<p>
+    <strong>Precondiciones: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_numero)<br>
+    0 &lt; len(str_numero) &le; 10<br>
+    2 &le; base &le; 36
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        Tenemos un gran equipo humano en CheckiO, si no consigues resolver esta misión, usa la opción de 
+        "pedir consejo" para que alguno de nuestros integrantes te eche una mano.
+    </p>
+</div>
