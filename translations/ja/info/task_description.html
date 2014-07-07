@@ -1,0 +1,80 @@
+﻿<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+	数学の授業の<a href="http://en.wikipedia.org/wiki/Radix">基数(radix)</a>と
+	<a href="http://en.wikipedia.org/wiki/Numeral_system">記数法(Numeral system)</a>を覚えていますか?
+	それを使って練習してみましょう。
+	(訳注: 基数は例えば10進数の10のことです。底と呼ばれることもあります。記数法はN進法のことです。この場合Nが基数になります。
+	詳しくは<a href="http://ja.wikipedia.org/wiki/%E4%BD%8D%E5%8F%96%E3%82%8A%E8%A8%98%E6%95%B0%E6%B3%95">位取り記数法</a>を参照してください)
+</p>
+
+<p>
+	あなたには文字列で表現された正の数とその基数が一緒に与えられます。
+	あなたの関数はこれを10進数に変換しなければいけません。
+	基数は37より小さく1より大きいです。
+	このタスクは文字列に数字と文字A-Zを使います。
+</p>
+
+<p>
+	数が変換できない場合に気をつけてください。
+	例えば: "1A"は基数9(訳注: 9進数)に変換できません。
+	このような場合にあなたの関数は-1を返さなければいけません。
+</p>
+
+
+<p>
+    <strong>ヒント(Tips): </strong> あなたはこのタスクを以下を使って簡単に解くことができます。
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.jp/2/library/functions.html#int">int()変換</a>と
+    <a href="http://docs.python.jp/2/tutorial/errors.html#exceptions">例外(exception)の処理</a>
+    (<a href="http://docs.python.jp/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>を見ましょう)。
+    {% else %}
+    <a href="http://docs.python.jp/3/library/functions.html#int">int()変換</a>と
+    <a href="http://docs.python.jp/3/tutorial/errors.html#exceptions">例外(exception)の処理</a>
+    (<a href="http://docs.python.jp/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>を見ましょう)。
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>入力: </strong>二つの引数。数の文字列と基数の整数。
+</p>
+
+<p>
+    <strong>出力: </strong>変換された数、整数。
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+	ここであなたは様々な記数法を使う方法と例外の処理を学ぶでしょう。
+</p>
+
+<p>
+    <strong>事前条件: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36
+</p>
+
+<div class="facts for_info_only">
+    <p>
+		私たちはCheckiOにアドバイザーチームを持っているので、あなたのチャレンジが詰まったときには、
+		「アドバイザーにたずねる(ask advisers)」機能を使って誰かにそれについて質問することができます。
+    </p>
+</div>
