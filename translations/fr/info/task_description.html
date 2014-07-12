@@ -1,0 +1,77 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    Vous rappelez-vous <a href="http://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29">des bases</a> et <a href="http://fr.wikipedia.org/wiki/Syst%C3%A8me_de_num%C3%A9ration">des syst&egrave;mes de num&eacute;ration</a> en classe de maths ?
+    On va les mettre en pratique !
+</p>
+
+<p>
+    On vous donne un nombre positif en tant que chaine de caract&egrave;res, ainsi que la base qui va avec.
+    Votre fonction doit le convertir en format d&eacute;cimal.
+    La base est inf&eacute;rieure &agrave; 37 et sup&eacute;rieure &agrave; 1.
+    La t&acirc;che utilise les chiffres et les lettres A-Z dans les chaines de caract&egrave;res.
+</p>
+
+<p>
+    M&eacute;fiez-vous des cas o&ugrave; le nombre ne peut pas &ecirc;tre converti.
+    Par exemple : "1A" ne peut pas &ecirc;tre converti en base 9.
+    Pour ces cas, votre fonction doit retourner -1.
+</p>
+
+
+<p>
+    <strong>Conseils : </strong> Vous pouvez facilement r&eacute;soudre cette t&acirc;che avec
+    {% if "python 2" in interpreter|lower %}
+    <a href="http://docs.python.org/2/library/functions.html#int">les conversions en int()</a> et 
+    <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">la gestion d'exceptions</a>
+    (Regardez &agrave; <a href="http://docs.python.org/2/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+    {% else %}
+    <a href="http://docs.python.org/3/library/functions.html#int">les conversions en int()</a> et 
+    <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">la gestion d'exceptions</a>
+    (Regardez &agrave; <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+
+    {% endif %}
+</p>
+
+
+<p>
+    <strong>Entr&eacute;e : </strong> Deux arguments. Un nombre en tant que chaine de caract&egrave;res et une base en tant qu'entier.
+</p>
+
+<p>
+    <strong>Sortie : </strong> Le nombre converti en tant qu'entier.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple :</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>&Agrave; quoi cela sert : </strong>
+    Ici vous allez apprendre &agrave; comment travailler avec diff&eacute;rents syst&egrave;mes de num&eacute;ration et &agrave; g&eacute;rer des exceptions.
+</p>
+
+<p>
+    <strong>Pr&eacute;condition : </strong><br>
+    re.match("\A[A-Z0-9]\Z", nombre_str)<br>
+    0 &lt; len(nombre_str) &le; 10<br>
+    2 &le; base &le; 36
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        Nous avons une &eacute;quipe de conseillers sur CheckiO ; donc si vous &ecirc;tes bloqu&eacute; par la r&eacute;solution d'un probl&egrave;me,
+        utilisez la fonction "ask advisers" pour poser une question &agrave; quelqu'un &agrave; ce propos.
+    </p>
+</div>
