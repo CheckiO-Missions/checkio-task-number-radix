@@ -1,0 +1,40 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        Don't try to reinvent the bicycle and use <a href="http://docs.python.org/3/library/functions.html#int">int() conversion</a>.
+        Python already has a tool to convert a number between various number bases.
+<pre class="brush: python">
+int("1A", 16) == 170
+int("101", 2) == 5
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I need some help to proceed with the mission
+    </div>
+    <div class="answer">
+        But careful with "wrong" cases because "int" will raise the error (ValueError) for that.
+        Read about <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">handling exceptions</a>
+    (Look at <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I am gone half way through. Need help!
+    </div>
+    <div class="answer">
+        Instead of checking all cases before you can just add error processing and be ready for these errors.
+<pre class="brush: python">
+try:
+    do_someting # return something
+except ValueError: # except without a type is a bad practice
+    do_somethig_for_error # return result_for_error
+    </pre>
+    </div>
+</div>
+
+</body>
