@@ -2,26 +2,28 @@
      style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
 
 <p>
-    Vous rappelez-vous <a href="http://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29">des bases</a> et <a href="http://fr.wikipedia.org/wiki/Syst%C3%A8me_de_num%C3%A9ration">des syst&egrave;mes de num&eacute;ration</a> en classe de maths ?
+    Vous rappelez-vous <a href="http://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29">des bases</a>
+    et <a href="http://fr.wikipedia.org/wiki/Syst%C3%A8me_de_num%C3%A9ration">des syst&egrave;mes de num&eacute;ration</a> 
+    en classe de maths ?
     On va les mettre en pratique !
 </p>
 
 <p>
-    On vous donne un nombre positif en tant que chaine de caract&egrave;res, ainsi que la base qui va avec.
-    Votre fonction doit le convertir en format d&eacute;cimal.
-    La base est inf&eacute;rieure &agrave; 37 et sup&eacute;rieure &agrave; 1.
-    La t&acirc;che utilise les chiffres et les lettres A-Z dans les chaines de caract&egrave;res.
+    On vous donne un nombre positif en tant que chaine de caract&egrave;res, ainsi que la base dans laquelle il est écrit.
+    Votre fonction doit le convertir au format d&eacute;cimal.
+    La base sera inf&eacute;rieure &agrave; 37 et sup&eacute;rieure &agrave; 1.
+    Les caractères utilisés pour l'écriture du nombre dans cette base sont les chiffres et les lettres A-Z.
 </p>
 
 <p>
     M&eacute;fiez-vous des cas o&ugrave; le nombre ne peut pas &ecirc;tre converti.
-    Par exemple : "1A" ne peut pas &ecirc;tre converti en base 9.
-    Pour ces cas, votre fonction doit retourner -1.
+    Par exemple : "1A" ne correspond pas à l'écriture d'un nombre entier naturel en base 9.
+    Dans ces cas, votre fonction doit retourner -1.
 </p>
 
 
 <p>
-    <strong>Conseils : </strong> Vous pouvez facilement r&eacute;soudre cette t&acirc;che avec
+    <strong>Conseils : </strong> Vous pouvez facilement r&eacute;soudre cette mission avec
     {% if "python 2" in interpreter|lower %}
     <a href="http://docs.python.org/2/library/functions.html#int">les conversions en int()</a> et 
     <a href="http://docs.python.org/2/tutorial/errors.html#exceptions">la gestion d'exceptions</a>
@@ -40,7 +42,7 @@
 </p>
 
 <p>
-    <strong>Sortie : </strong> Le nombre converti en tant qu'entier.
+    <strong>Sortie : </strong> Le nombre converti en base 10 en tant qu'entier.
 </p>
 
 
@@ -59,7 +61,7 @@ checkio("AB", 10) == -1
 
 <p class="for_info_only">
     <strong>&Agrave; quoi cela sert : </strong>
-    Ici vous allez apprendre &agrave; comment travailler avec diff&eacute;rents syst&egrave;mes de num&eacute;ration et &agrave; g&eacute;rer des exceptions.
+    Vous allez apprendre ici &agrave;  travailler avec diff&eacute;rents syst&egrave;mes de num&eacute;ration et &agrave; g&eacute;rer des exceptions.
 </p>
 
 <p>
@@ -71,7 +73,8 @@ checkio("AB", 10) == -1
 
 <div class="facts for_info_only">
     <p>
-        Nous avons une &eacute;quipe de conseillers sur CheckiO ; donc si vous &ecirc;tes bloqu&eacute; par la r&eacute;solution d'un probl&egrave;me,
-        utilisez la fonction "ask advisers" pour poser une question &agrave; quelqu'un &agrave; ce propos.
+        Nous avons une &eacute;quipe de conseillers sur CheckiO ; 
+        donc si vous &ecirc;tes bloqu&eacute; lors de la r&eacute;solution d'un probl&egrave;me,
+        utilisez la rubrique "ask advisers" pour demander de l'aide en posant une question aux conseillers.
     </p>
 </div>
