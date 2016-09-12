@@ -5,7 +5,7 @@
     </div>
     <div class="answer">
         Versuch nicht das Rad neu zu erfinden und benutze die <a href="http://docs.python.org/3/library/functions.html#int">int() Funktion</a>.
-        Python hat schon ein Tool um eine Zahl in verschiedene Basen zu konvertieren.
+        Python hat schon ein Tool um eine Zahl in verschiedene Stellenwertsysteme zu konvertieren.
 <pre class="brush: python">
 int("1A", 16) == 170
 int("101", 2) == 5
@@ -17,7 +17,7 @@ int("101", 2) == 5
         Ich benötige etwas Hilfe, um mit der Mission weiterfahren zu können
     </div>
     <div class="answer">
-        Aufgepasst bei "falschen" Fällen, weil "int()" wird einen Fehler (ValueError) dafür ausgeben.
+        Aufgepasst bei "falschen" Fällen, denn "int()" wird einen Fehler (ValueError) dafür ausgeben.
         Lies dazu, wie Du <a href="http://docs.python.org/3/tutorial/errors.html#exceptions">Ausnahmen handhaben</a> kannst.
     (Schaue bei <a href="http://docs.python.org/3/library/exceptions.html?highlight=valueerror#ValueError">ValueError</a>).
     </div>
@@ -27,11 +27,11 @@ int("101", 2) == 5
         Ich bin auf halbem Wege verloren. Ich brauche Hilfe!
     </div>
     <div class="answer">
-        Anstelle für jeden Fall einzeln im Voraus zu prüfen, kannst Du einfach die Fehlerbehandlung einbinden und bist für diese Fehler gerüstet.
+        Anstatt für jeden Fall einzeln im Voraus zu prüfen, kannst Du einfach die Fehlerbehandlung einbinden und bist für diese Fehler gerüstet.
 <pre class="brush: python">
 try:
     do_someting # etwas ausgeben
-except ValueError: # except (Ausnahmehandabung) ohne Typenangabe ist schlechte Praktik
+except ValueError: # except Ausnahmebehandlung ohne Typenangabe ist schlechte Praktik
     do_somethig_for_error # Den Grund des Fehlers ausgeben
     </pre>
     </div>
