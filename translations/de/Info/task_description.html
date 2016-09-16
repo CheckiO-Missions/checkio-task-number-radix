@@ -1,0 +1,62 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    Erinnerst Du Dich an <a href="https://de.wikipedia.org/wiki/Stellenwertsystem#Basis">die Basiszahl</a> und 
+    <a href="https://de.wikipedia.org/wiki/Stellenwertsystem">Stellenwertsysteme</a> vom Matheunterricht ?
+    Lass uns damit diese Aufgabe bestreiten.
+</p>
+
+<p>
+    Du bekommst eine positive Zahl als Zeichenfolge (String) mit der zugehörigen Basiszahl. Deine Funktion soll sie ins 
+    Dezimalsystem umwandeln.
+    Die Basis ist weniger als 37 und grösser als 1.
+    Die Aufgabe verwendet Ziffern und die Buchstaben A-Z für die Zeichenfolgen.
+</p>
+
+<p>
+    Pass auf für Fälle, wenn es nicht möglich ist, die Zahl umzuwandeln.
+    Zum Beispiel: "1A" kann nicht mit Basis 9 umgewandelt werden.
+    Für diese Fälle soll Deine Funktion -1 zurückgeben.
+</p>
+
+<p>
+    <strong>Eingabe: </strong> Zwei Argumente. Eine Nummer als Zeichenfolge (String) und eine Basis als Ganzzahl (Integer).
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Die umgewandelte Zahl als Ganzzahl (Integer).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiel:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu ist das gut: </strong>
+    Hiermit lernst Du, wie Du mit verschiedenen Zahlensystemen arbeiten kannst und wie Du mit Ausnahmen umgehst.
+</p>
+
+<p>
+    <strong>Bedingung:</strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        Wir haben ein Beraterteam auf CheckiO, wenn Du nicht weiterkommst mit dem Lösen einer Aufgabe, nutze die “ask advisers” Funktion um
+        um eine Frage dazu zu stellen.
+    </p>
+</div>
