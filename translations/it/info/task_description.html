@@ -1,0 +1,62 @@
+<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
+     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+
+<p>
+    Ti ricordi <a href="http://en.wikipedia.org/wiki/Numeral_system">basi</a> e
+    <a href="https://it.wikipedia.org/wiki/Sistema_di_numerazione">sistemi di numerazione</a> dalle lezioni di matematica?
+    Facciamoci un po' di pratica.
+</p>
+
+<p>
+    Ti viene dato un numero positivo come stringa assieme alla sua base.
+    La tua funzione deve convertirlo in forma decimale.
+    La base &egrave; minore di 37 e maggiore di 1.
+    Il compito adopera cifre e le lettere A-Z per le stringhe.
+</p>
+
+<p>
+    Attento ai casi in cui il numero non pu&ograve; essere convertito.
+    Ad esempio: "1A" non pu&ograve; essere convertito con base 9.
+    In tali situazioni la tua funzione deve restituire -1.
+</p>
+
+<p>
+    <strong>Input: </strong> Due argomenti. Un numero come stringa ed una base come intero.
+</p>
+
+<p>
+    <strong>Output: </strong> Il numero convertito com intero.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Esempio:</strong>
+    </p>
+    <pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Come si usa: </strong>
+    Imparerai come si lavora coi vari sistemi numerali e come si gestiscono le eccezioni.
+</p>
+
+<p>
+    <strong>Prerequisiti: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        Abbiamo una squadra di consiglieri su CheckiO, dunque se ti blocchi nella soluzione di una sfida
+        usa la funzione "ask advisers" per fare delle domande in proposito a qualcuno.
+    </p>
+</div>
