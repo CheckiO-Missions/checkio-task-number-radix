@@ -1,5 +1,6 @@
-<img class="for_info_only" title="base" src="{{MEDIA}}base.png" alt="base"
-     style="width: 300px;float: right; margin-top: 30px; padding: 0 10px 0 30px;"/>
+<div class="for_info_only half" style="text-align: center">
+    <img src="{{MEDIA}}base.png" style="max-height: 400px">
+</div>
 
 <p>
     Vous rappelez-vous <a href="http://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29">des bases</a>
@@ -45,19 +46,26 @@
     <strong>Sortie : </strong> Le nombre converti en base 10 en tant qu'entier.
 </p>
 
-
-<div class="for_info_only">
-    <p>
-        <strong>Exemple :</strong>
-    </p>
-    <pre class="brush: python">
+<p class="for_info_only">
+    <strong>Exemple:</strong>
+    {% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+numberRadix("AF", 16) == 175
+numberRadix("101", 2) == 5
+numberRadix("101", 5) == 26
+numberRadix("Z", 36) == 35
+numberRadix("AB", 10) == -1
+</pre>
+    {% else %}
+<pre class="brush: python">
 checkio("AF", 16) == 175
 checkio("101", 2) == 5
 checkio("101", 5) == 26
 checkio("Z", 36) == 35
 checkio("AB", 10) == -1
-    </pre>
-</div>
+</pre>
+    {% endif %}
+</p>
 
 <p class="for_info_only">
     <strong>&Agrave; quoi cela sert : </strong>
