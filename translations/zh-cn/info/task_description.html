@@ -1,0 +1,64 @@
+<img class="for_info_only half" src="{{MEDIA}}base.png" style="max-height: 400px; float:left">
+
+<p>
+    你是否还记得数学课上学过的Do you remember <a href="http://en.wikipedia.org/wiki/Radix">底数（对数）</a>和
+    <a href="http://en.wikipedia.org/wiki/Numeral_system">计数系统（进制）</a>?
+让我们来重温练习一下吧。
+</p>
+
+<p>
+    给你一个字符串格式的正数和一个小于37大于1的整数型底数，用你写出来的方法来把他们转换为底数为10（十进制）的形式。
+    任务使用数字和‘A-Z’来作为字符串格式的正数。
+</p>
+
+<p>
+    注意数字无法转换的情况。 例如：“1A”不能用基数9进行转换。对于这些情况，你的函数应该返回-1。
+</p>
+
+<p>
+    <strong>输入: </strong> 两个参数，一个字符串参数的正数和一个整数参数底数。
+</p>
+
+<p>
+    <strong>输出: </strong> 一个被转换完的十进制整数。
+</p>
+
+<p class="for_info_only">
+    <strong>举个栗子:</strong>
+    {% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+numberRadix("AF", 16) == 175
+numberRadix("101", 2) == 5
+numberRadix("101", 5) == 26
+numberRadix("Z", 36) == 35
+numberRadix("AB", 10) == -1
+</pre>
+    {% else %}
+<pre class="brush: python">
+checkio("AF", 16) == 175
+checkio("101", 2) == 5
+checkio("101", 5) == 26
+checkio("Z", 36) == 35
+checkio("AB", 10) == -1
+</pre>
+    {% endif %}
+</p>
+
+<p class="for_info_only">
+    <strong>你将学到: </strong>
+    在这个任务中你将学会如何处理各种不同进制的数据，以及一些处理异常等知识。
+</p>
+
+<p>
+    <strong>Precondition: </strong><br>
+    re.match("\A[A-Z0-9]\Z", str_number)<br>
+    0 &lt; len(str_number) &le; 10<br>
+    2 &le; radix &le; 36
+</p>
+
+<div class="facts for_info_only">
+    <p>
+        We have an adviser team on CheckiO, so if you get stuck solving a challenge, use the “ask advisers” function to
+        ask someone a question about it.
+    </p>
+</div>
