@@ -7,6 +7,9 @@ function numberRadix(str_number, radix){
 var assert = require('assert');
 
 if (!global.is_checking) {
+    console.log('Example:')
+    console.log(numberRadix("AF", 16))
+    
     assert.equal(numberRadix("AF", 16), 175, "Hex");
     assert.equal(numberRadix("101", 2), 5, "Bin");
     assert.equal(numberRadix("101", 5), 26, "5 base");
